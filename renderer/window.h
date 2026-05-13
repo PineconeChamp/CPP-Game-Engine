@@ -4,8 +4,10 @@
 class Window
 {
     public:
-        int OpenWindow(int WIDTH, int HEIGHT, const char *WINDOWNAME);
+        int OpenGameWindow(int WIDTH, int HEIGHT, const char *WINDOWNAME);
+        int CloseGameWindow();
         int RenderLoop();
+        bool ShouldClose();
 };
 
 #endif // WINDOW_H

@@ -7,7 +7,7 @@ class Engine
 {
     public:
         Engine(std::string name);
-
+        int Run();
         bool isRunning;
 
     private:
