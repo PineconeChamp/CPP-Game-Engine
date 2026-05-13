@@ -1,8 +1,9 @@
 #include <iostream>
+#include <stdio.h>
 #include <raylib.h>
 #include "engine.h"
 #include "renderer/window.h"
-
+//#include "renderer/game.h"
 
 int main(){
 
@@ -13,13 +14,14 @@ int main(){
 
     while (engine.isRunning == true)
     {
-        BeginDrawing();
+        
+        window.RenderLoop();
 
-        ClearBackground(BLACK);
-
-        DrawText("Welcome to Pine Engine!", 25, 25, 20, LIGHTGRAY);
-
-        EndDrawing();
+        if (WindowShouldClose()){
+            //Eventually bind a proper set of shutdown events but just kill for now
+            printf("Killing Engine\n");
+            engine.isRunning = false;
+        }
 
     }
 

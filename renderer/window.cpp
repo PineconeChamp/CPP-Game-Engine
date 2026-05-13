@@ -13,3 +13,12 @@ int Window::OpenWindow(int WIDTH = 800, int HEIGHT = 600, const char *WINDOWNAME
 
     return 0;
 }
+
+int Window::RenderLoop()
+{
+    BeginDrawing();
+
+    EndDrawing();
+
+    return 0;
+}
