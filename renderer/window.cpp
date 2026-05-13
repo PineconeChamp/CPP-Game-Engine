@@ -1,8 +1,10 @@
 #include <iostream>
 #include <raylib.h>
 #include <string>
+#include "window.h"
 
-int OpenWindow(int WIDTH = 800, int HEIGHT = 600, const char *WINDOWNAME = "Raylib Window")
+
+int Window::OpenWindow(int WIDTH = 800, int HEIGHT = 600, const char *WINDOWNAME = "Raylib Window")
 {
     InitWindow(WIDTH, HEIGHT, WINDOWNAME);
 
